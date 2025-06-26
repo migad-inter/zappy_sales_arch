@@ -1,4 +1,6 @@
-# Error Handling considerations for the Data Ingestion Group
+# **[Error Handling considerations for the Zappy Sales Architecture](kafka_retry_with_dlq.txt)**
+We will use similar mechanisms for both the Data Ingestion and MarketPlace Aggregator components to handle errors effectively.
+
 
 | Type                  | Example                                 | Strategy                         |
 | --------------------- | --------------------------------------- |----------------------------------|
