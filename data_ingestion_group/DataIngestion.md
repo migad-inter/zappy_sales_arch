@@ -89,5 +89,6 @@ RabbitMQ, Amazon SQS.) for further processing.
 - We can also shard and parellize by vendor with vendorID = shard key.
 - if using Kafka, we can use partitions and consumer groups to handle uneven transaction volume.
 
-### **[Error Handling](../architecture_patterns/ErrorHandling.md)**:
+### **[Error Handling](../architecture_patterns/ErrorHandling.md)**
+We will use a combination of retry mechanisms, dead letter queues, and alerting to handle errors in the ingestion pipeline.
 
