@@ -40,5 +40,5 @@ are grouped into the following main areas:
 - **[Data Ingestion Component Group](data_ingestion_group/DataIngestion.md)**
 - **[MarketPlace Aggregator](marketplace_aggregator/README.md)** 
 
-### [Database Schemas](architecture_patterns/database_schemas.md)
+### [Database Schemas](architecture_patterns/database.md)
 
