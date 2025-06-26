@@ -1,0 +1,10 @@
++-------------------+        +----------------------+
+|     inventory     |        |   stock_change_log   |
++-------------------+        +----------------------+
+| sku (PK)          |<---+   | id (PK)              |
+| total_stock       |     +--| sku (FK)             |
+| available_stock   |        | change_type          |
+| reserved_stock    |        | quantity             |
+| last_updated      |        | source               |
+                        +--->| timestamp            |
+                             +----------------------+

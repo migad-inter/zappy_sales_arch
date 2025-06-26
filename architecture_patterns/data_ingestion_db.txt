@@ -1,0 +1,10 @@
++-------------------+        +--------------------+        +----------------------+
+|   vendor_source   |        |      raw_feed      |        |   normalized_event   |
++-------------------+        +--------------------+        +----------------------+
+| id (PK)           |<---+   | id (PK)            |        | id (PK)              |
+| name              |     +--| vendor_id (FK)     |        | sku                  |
+| transport_type    |        | received_at        |        | vendor_id (FK)       |
+| config_json       |        | file_name          |        | normalized_data (JSON)|
+| active            |        | status             |        | event_time           |
+                        +--->| error_message      |        | status               |
+                             +--------------------+        +----------------------+
