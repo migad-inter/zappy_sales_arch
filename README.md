@@ -4,6 +4,7 @@ A Repo to store Zappy Sales Architecture Artifacts
 ### Summary of the Patterns and architecture principles being Used
 Check [here](architecture_patterns/patterns_used.md) for the patterns and architecture principles being used in the Zappy Sales Architecture.
 
+[Overall Architecture Diagram](overall_arch_with_sharding.txt)
 
 ### Main Constraints 
 
