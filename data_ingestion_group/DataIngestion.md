@@ -1,6 +1,6 @@
 # **Data Ingestion Group**:
-
 A batch application that allows users to interact with the system.
+
 
 
 ## Modular Microservices-based Ingestion Pipeline:
@@ -88,3 +88,6 @@ RabbitMQ, Amazon SQS.) for further processing.
 - Allows fine-grained control over thru-put and prioritization.
 - We can also shard and parellize by vendor with vendorID = shard key.
 - if using Kafka, we can use partitions and consumer groups to handle uneven transaction volume.
+
+### **[Error Handling](../architecture_patterns/ErrorHandling.md)**:
+
