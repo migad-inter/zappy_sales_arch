@@ -1,0 +1,49 @@
+                          +-----------------------+
+                          | Product Update Events |
+                          |  (from ingestion)     |
+                          +-----------------------+
+                                     |
+                                     v
+                          +------------------------+
+                          | Kafka / SQS Topic       |
+                          | (Pricing Updates Queue) |
+                          +------------------------+
+                                     |
+                             [Sharded Consumers] -- can be independently scaled for volume
+                                     |
+                                     v
+                          +------------------------+
+                          | Repricer Service       |
+                          | - Business rules       |
+                          | - Cache (Redis)        |
+                          +------------------------+
+                                     |
+                            (Enriched Price Events)
+                                     |
+                                     v
+                          +------------------------+
+                          | Outbox / Staging Table |
+                          | - Durable queue        |
+                          | - For reliable dispatch|
+                          +------------------------+
+                                     |
+                         [Parallel Marketplace Dispatchers]
+                            /             |
+                           v              v
+                    +-----------+  +------------+
+                    | Amazon API|  | eBay API   |
+                    +-----------+  +------------+
+                           |              |
+                           v              v
+                    +-------------+  +------------+
+                    | Rate Limiter|  | Retry Logic|
+                    +-------------+  +------------+
+                           \              |
+                            \             v
+                              +----------------------+
+                              | Success / DLQ Logging|
+                              +----------------------+
+                                     |
+                              +-------------------+
+                              | Monitoring / Audit|
+                              +-------------------+

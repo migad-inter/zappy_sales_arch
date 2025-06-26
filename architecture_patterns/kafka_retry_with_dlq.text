@@ -1,0 +1,18 @@
+[ Kafka Main Topic ]
+        |
+    [ Consumer ]
+        |
+  +-------------+
+  | Try Process |
+  +-------------+
+        |
+     [ Success ]
+        |
+     [ DB / Marketplace ]
+        |
+     [ --- ]
+        |
+    [ Failure ]
+        v
+[ Retry Topic 1 ] --> [ Retry Topic 2 ] --> [ Retry Topic 3 ] --> [ DLQ ]
+ (5s delay)         (30s delay)         (5m delay)          (final dump)
