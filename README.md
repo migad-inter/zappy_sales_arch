@@ -37,7 +37,7 @@ Zappy Sales Architecture.
 So we want to capture a cluster of components that will be used to build the Zappy Sales Architecture. The components
 are grouped into the following main areas:
 
-**-[Data Ingestion Component Group](data_ingestion_group/DataIngestion.md)**
-**-[MarketPlace Aggregator](marketplace_aggregator/README.md)** 
+- **[Data Ingestion Component Group](data_ingestion_group/DataIngestion.md)**
+- **[MarketPlace Aggregator](marketplace_aggregator/README.md)** 
 
 
